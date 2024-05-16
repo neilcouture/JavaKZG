@@ -1,0 +1,79 @@
+NHKZG {
+	Apache Milagro
+	gradle dependency 'org.miracl.milagro.amcl:milagro-crypto-java'.
+
+	incubator-tuweni 
+
+	import org.apache.milagro.amcl.BLS381.ECP;
+	import org.apache.milagro.amcl.BLS381.ECP2;
+	import org.apache.milagro.amcl.BLS381.MPIN;
+
+
+	implementation 'org.miracl.milagro.amcl:milagro-crypto-java:0.4.0'
+
+}
+
+# TOREAD
+	* 
+	* https://dankradfeist.de/ethereum/2021/06/18/pcs-multiproofs.html
+	* https://hackmd.io/yqfI6OPlRZizv9yPaD-8IQ?view
+	* https://ethresear.ch/t/kate-commitments-in-eth/9613
+		* add comment
+	* https://notes.ethereum.org/@vbuterin/verkle_tree_eip
+	* https://hackmd.io/@benjaminion/bls12-381 (again)
+
+# How does PLONK work? Part 10: The Kate polynomial commitment scheme:
+	* https://www.youtube.com/watch?v=iwOovhLU8U4
+
+# Polynomial class
+	* https://www.youtube.com/watch?v=i_Qn-d6WExs
+
+* Kewl URL:
+	* https://www.cryptologie.net/article/525/pairing-based-polynomial-commitments-and-kate-polynomial-commitments/
+
+
+
+# Lagrange Interpolation
+	* https://geosoft.no/software/lagrange/LagrangeInterpolation.java.html
+		* Use Jama
+	* http://entangle-pair.blogspot.com/2014/12/lagranges-interpolation-polynomial-in-java.form.html
+		* 
+	* https://www.geeksforgeeks.org/lagranges-interpolation/
+		* simple code
+	* https://blog.ethereum.org/2014/08/16/secret-sharing-erasure-coding-guide-aspiring-dropbox-decentralizer/
+
+# FFT
+	* https://vitalik.ca/general/2019/05/12/fft.html
+		* python code
+		* how to to use FFT with finite field
+	* https://github.com/ethereum/research/blob/master/trusted_setup/trusted_setup.py
+	* https://www.geeksforgeeks.org/fast-fourier-transformation-poynomial-multiplication/
+		* python and c++ code
+	* https://introcs.cs.princeton.edu/java/97data/FFT.java.html
+		* java, power of 2
+	* https://sites.google.com/site/piotrwendykier/software. JTransform
+		* java
+		* https://github.com/wendykierp/JTransforms
+	* https://www.ee.columbia.edu/~ronw/code/MEAPsoft/doc/html/FFT_8java-source.html
+
+	* https://math.stackexchange.com/questions/764727/concrete-fft-polynomial-multiplication-example
+		* good example
+	* https://www.youtube.com/watch?v=h7apO7q16V0
+
+
+	* ROOT OF UNITY:
+	* https://github.com/adjoint-io/pairing/blob/master/src/Data/Pairing/BLS12381.hs
+
+# Code Example
+	* https://github.com/ethereum/go-ethereum/blob/master/crypto/bls12381/pairing.go
+		* finalExp
+	* https://github.com/protolambda/go-kzg/blob/master/setup.go
+	* https://github.com/protolambda/go-kzg/blob/master/kzg_single_proofs.go
+		* https://github.com/protolambda/go-kzg/blob/master/kzg_single_proofs_test.go
+	* https://github.com/ethereum/research/tree/master/kzg_data_availability
+    *
+
+> share.lagrange_interp(
+y = [1.0, 3.0, 2.0, 1.0], 
+x = [1.0, 2.0, 3.0, 4.0])
+[-7.0, 12.000000000000002, -4.5, 0.4999999999999999]
